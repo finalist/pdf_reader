@@ -1,6 +1,6 @@
 require 'zlib'
 
-class PdfReader
+class PDFReader
   def initialize(file)
     @file = file
   end
