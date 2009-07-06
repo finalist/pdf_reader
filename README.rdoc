@@ -1,11 +1,11 @@
 = PDF Reader plugin
 
-Rails plugin that gives you the "power" to extract raw text from a PDF.
+Gem that gives you the "power" to extract raw text from a PDF.
 
 == Installation
 
 Type:
-  ./script/plugin install git://github.com/finalist/pdf_reader.git
+  sudo gem install finalist-pdf_reader
 
 And... done!
 
