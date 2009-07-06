@@ -1,23 +1,23 @@
 require 'rake'
-require 'rake/testtask'
-require 'rake/rdoctask'
+require 'spec/rake/spectask'
+require 'echoe'
 
-desc 'Default: run unit tests.'
-task :default => :test
-
-desc 'Test the pdf_reader plugin.'
-Rake::TestTask.new(:test) do |t|
-  t.libs << 'lib'
-  t.libs << 'test'
-  t.pattern = 'test/**/*_test.rb'
-  t.verbose = true
+Echoe.new('pdf_reader', '0.0.1') do |p|
+  p.description     = "PDF reader"
+  p.url             = "http://github.com/finalist/pdf_reader"
+  p.author          = "Diederick Lawson"
+  p.email           = "diederick@finalist.com"
+  p.ignore_pattern  = ["tmp/*", "script/*"]
+  p.development_dependencies = []
 end
 
-desc 'Generate documentation for the pdf_reader plugin.'
-Rake::RDocTask.new(:rdoc) do |rdoc|
-  rdoc.rdoc_dir = 'rdoc'
-  rdoc.title    = 'PDFReader'
-  rdoc.options << '--line-numbers' << '--inline-source'
-  rdoc.rdoc_files.include('README')
-  rdoc.rdoc_files.include('lib/**/*.rb')
+Dir["#{File.dirname(__FILE__)}/tasks/*.rake"].sort.each { |ext| load ext }
+
+desc 'Default: run specs.'
+task :default => :spec
+
+desc 'Run the specs'
+Spec::Rake::SpecTask.new(:spec) do |t|
+  t.spec_opts = ['--colour --format progress --loadby mtime --reverse']
+  t.spec_files = FileList['spec/**/*_spec.rb']
 end

@@ -1,0 +1,9 @@
+Manifest
+Rakefile
+README.rdoc
+MIT-LICENSE
+pdf_reader.gemspec
+lib/pdf_reader.rb
+spec/pdf_reader_spec.rb
+spec/test.html
+spec/test.pdf

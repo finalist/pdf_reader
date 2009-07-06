@@ -18,4 +18,4 @@ Create a new object and call +raw_text+:
 ... Done!
 
 == Credits
-Copyright 2009, Finalist IT Group. Released under the MIT License.
+Copyright 2009, Diederick Lawson - Finalist IT Group. Released under the MIT License.
