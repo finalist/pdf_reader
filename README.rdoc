@@ -5,7 +5,7 @@ Gem that gives you the "power" to extract raw text from a PDF.
 == Installation
 
 Type:
-  sudo gem install finalist-pdf_reader
+  sudo gem install pdf_reader
 
 And... done!
 
