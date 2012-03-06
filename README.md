@@ -1,5 +1,7 @@
 # PDF Reader
 
+[![Build Status](https://secure.travis-ci.org/finalist/pdf_reader.png?branch=master)](http://travis-ci.org/finalist/pdf_reader)
+
 Gem that gives you the "power" to extract raw text from a PDF.
 
 ## Installation
