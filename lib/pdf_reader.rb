@@ -1,4 +1,5 @@
 require 'zlib'
+require 'pdf_reader/version'
 
 class PDFReader
   def initialize(file)

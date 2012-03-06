@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "pdf_reader"
   gem.require_paths = ["lib"]
-  gem.version       = PdfReader::VERSION
+  gem.version       = PDFReader::VERSION
 
   gem.add_development_dependency 'rspec'
 end
